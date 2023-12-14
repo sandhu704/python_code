@@ -8,7 +8,7 @@ def customTopology():
     net = Mininet(controller=Controller, switch=OVSSwitch, link=TCLink)
 
     # Add controller
-    c0 = net.addController('c0')
+    c0 = net.addController('c0',controller=Controller,ip='0.0.0.0',port=6633)
 
     # Add switches
     s1 = net.addSwitch('s1')
